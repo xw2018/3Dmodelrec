@@ -1,0 +1,12 @@
+import os
+path="modelnet10r/"
+os.chdir(path)
+os.system("python3 -m venv .env")
+os.system("source .env/bin/activate")
+os.system("pip install -r mac_requirements.txt")
+
+
+for i in [5,10,15,20,25]:
+    # print("python binvox_convert.py modelnet10z{}/ --remove-all-dupes".format(i))
+    os.system("python binvox_convert.py modelnet10z{}/ --remove-all-dupes".format(i))
+
